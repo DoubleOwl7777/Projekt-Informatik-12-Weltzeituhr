@@ -43,8 +43,8 @@ public class projekt_Informatik {
 		{DateTimeFormatter minutes = DateTimeFormatter.ofPattern("mm");
 		DateTimeFormatter hours = DateTimeFormatter.ofPattern("HH");
         
-		HH = hours.format(ZonedDateTime.now(ZoneId.of("Europe/Kiew")));
-        MM = minutes.format(ZonedDateTime.now(ZoneId.of("Europe/Kiew")));
+		HH = hours.format(ZonedDateTime.now(ZoneId.of("Europe/Helsinki")));
+        MM = minutes.format(ZonedDateTime.now(ZoneId.of("Europe/Helsinki")));
 		
         eingabeFertig=1;}
 
@@ -52,8 +52,8 @@ public class projekt_Informatik {
 		{DateTimeFormatter minutes = DateTimeFormatter.ofPattern("mm");
 		DateTimeFormatter hours = DateTimeFormatter.ofPattern("HH");
         
-		HH = hours.format(ZonedDateTime.now(ZoneId.of("Europe/Moskau")));
-        MM = minutes.format(ZonedDateTime.now(ZoneId.of("Europe/Moskau")));
+		HH = hours.format(ZonedDateTime.now(ZoneId.of("Europe/Moscow")));
+        MM = minutes.format(ZonedDateTime.now(ZoneId.of("Europe/Moscow")));
 		
         eingabeFertig=1;}
 		
