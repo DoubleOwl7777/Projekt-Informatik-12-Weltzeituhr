@@ -57,7 +57,7 @@ public class projekt_Informatik {
 		
         eingabeFertig=1;}
 		
-		
+		if (eingabeFertig==0)
 		{System.out.println("Ihre Eingabe ''"+ locationInput + "'' war leider nicht korrekt. Bitte überprüfen sie diese.");}
 		}
 		
