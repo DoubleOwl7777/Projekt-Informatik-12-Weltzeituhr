@@ -11,15 +11,19 @@ public class projekt_Informatik {
 	public static void main(String[] args) {
 	while (true)
 		{int eingabeFertig=0;		//flag um herauszufinden, ob alle eingaben richtig sind
+                int hilfe=0;
 		int ziffer1=0,ziffer2=0,ziffer3=0,ziffer4=0; //deklariere die variablen für die einzelnen ziffern
 		String HH ="0";
 		String MM ="0";
 		String locationInput="0";
 		while (eingabeFertig==0)
 		{Scanner location = new Scanner(System.in);
+                 System.out.println("Europauhr v1.1,für eine liste der Eingabemöglichkeiten bitte "h" eingeben");
 		 System.out.println("Von welchem Ort wollen sie die Uhrzeit wissen? (Europäische Hauptstädte)");
 		 locationInput = location.nextLine();
 		 System.out.println();
+
+                 hilfe=0;
 		 
 		 if(locationInput.equals("London")||locationInput.equals("Reykjavik")||locationInput.equals("Cardiff")||locationInput.equals("Edinburgh")||locationInput.equals("Belfast")||locationInput.equals("Dublin")||locationInput.equals("Lissabon"))		//wenn der ort in der zeitzohne UTC +0 liegt dann nimm die korrekte zeit dafür
 		{DateTimeFormatter minutes = DateTimeFormatter.ofPattern("mm");
@@ -56,8 +60,12 @@ public class projekt_Informatik {
         MM = minutes.format(ZonedDateTime.now(ZoneId.of("Europe/Moscow")));
 		
         eingabeFertig=1;}
+
+               if(locationinput.equals("h"))
+               {System.out.println("Mögliche Eingaben:");
+                hilfe=1;}
 		
-		if (eingabeFertig==0)
+		if (eingabeFertig==0&&hilfe==0)
 		{System.out.println("Ihre Eingabe ''"+ locationInput + "'' war leider nicht korrekt. Bitte überprüfen sie diese.");}
 		}
 		
