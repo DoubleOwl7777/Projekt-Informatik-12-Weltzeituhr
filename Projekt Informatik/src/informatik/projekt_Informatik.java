@@ -18,7 +18,7 @@ public class projekt_Informatik {
 		String locationInput="0";
 		while (eingabeFertig==0)
 		{Scanner location = new Scanner(System.in);
-                 System.out.println("Europauhr v1.1,für eine liste der Eingabemöglichkeiten bitte "h" eingeben");
+                 System.out.println("Europauhr v1.1,für eine liste der Eingabemöglichkeiten bitte h eingeben");
 		 System.out.println("Von welchem Ort wollen sie die Uhrzeit wissen? (Europäische Hauptstädte)");
 		 locationInput = location.nextLine();
 		 System.out.println();
@@ -61,7 +61,7 @@ public class projekt_Informatik {
 		
         eingabeFertig=1;}
 
-               if(locationinput.equals("h"))
+               if(locationInput.equals("h"))
                {System.out.println("Mögliche Eingaben:");
                 hilfe=1;}
 		
