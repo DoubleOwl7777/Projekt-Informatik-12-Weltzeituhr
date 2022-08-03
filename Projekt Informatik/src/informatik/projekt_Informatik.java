@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class projekt_Informatik {
 
 	public static void main(String[] args) {
-	while (true)
+		boolean exit =false;
+	while (exit==false)
 		{int eingabeFertig=0;		//flag um herauszufinden, ob alle eingaben richtig sind
                 int hilfe=0;
 		int ziffer1=0,ziffer2=0,ziffer3=0,ziffer4=0; //deklariere die variablen für die einzelnen ziffern
@@ -61,15 +62,23 @@ public class projekt_Informatik {
 		
         eingabeFertig=1;}
 
-               if(locationInput.equals("h"))
-               {System.out.println("Mögliche Eingaben:");
-                hilfe=1;}
+        if(locationInput.equals("h"))
+            {System.out.println("Mögliche Eingaben:");
+			System.out.println("h für dieses Hilfemenü");
+			System.out.println("Alle Europäischen Hauptstädte für die Uhrzeit am jeweiligen Ort");
+			System.out.println("exit, stop oder ende um das Programm zu beenden");
+			System.out.println();
+            hilfe=1;}
 		
-		if (eingabeFertig==0&&hilfe==0)
+		if(locationInput.equals("exit")||locationInput.equals("stop")||locationInput.equals("ende"))
+			{eingabeFertig=1;
+			exit=true;}
+		if (eingabeFertig==0&&hilfe==0&&exit==false)
 		{System.out.println("Ihre Eingabe ''"+ locationInput + "'' war leider nicht korrekt. Bitte überprüfen sie diese.");}
 		}
 		
-		ziffer1=Integer.parseInt(HH)/10;
+		if(exit==false)
+		{ziffer1=Integer.parseInt(HH)/10;
 		if(ziffer1==0)
 		{ziffer2=Integer.parseInt(HH);}
 		if(ziffer1==1)
@@ -1300,7 +1309,7 @@ public class projekt_Informatik {
 	        System.out.println("");
 		
 }
-
+		}
 }
 
 }
